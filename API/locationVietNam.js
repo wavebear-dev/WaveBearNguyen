@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const demoElementAc = document.getElementById('demo')
+  const demoElementAc = document.getElementById('demoLocationWaveBear')
   if (demoElementAc) {
     demoElementAc.hidden = true
     function renderLocation({ query = null, type = null, parentId = null, selectElement = null }) {
-      let urlApi = `/api/location-viet-nam/${type}?q=${query}`;
-      if (parentId) {
+      let urlApi = `https://wavebear.com.vn/api/location-viet-nam/${type}?q=${query}`;
+      if (parentId){
         parentId = parentId === 'all' ? 0 : parentId;
-        urlApi = `/api/location-viet-nam/${type}/${parentId}?q=${query}`;
+        urlApi = `https://wavebear.com.vn/api/location-viet-nam/${type}/${parentId}?q=${query}`;
       }
       fetch(urlApi)
         .then(response => {
