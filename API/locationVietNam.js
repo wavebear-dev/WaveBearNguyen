@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const demoElementAc = document.getElementById('demoLocationWaveBear')
+  const demoElementAc = document.getElementById('demo-location-wavebear')
   if (demoElementAc) {
     demoElementAc.hidden = true
     function renderLocation({ query = null, type = null, parentId = null, selectElement = null }) {
